@@ -1,0 +1,67 @@
+.intro {
+    background: url('../img/intro/sky.jpg') center (center/cover) no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #080C33 0%, 
+        rgba(8, 12, 51, 0.31) 100%);
+    }
+    &__content {
+        margin-top: px2rem(150);
+    }
+    &__title {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        span {
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+    &__subtitle {
+        color: #fff;
+        font-weight: 300;
+        position: relative;
+        z-index: 1;
+        margin-top: px2rem(15);
+    }
+}
+
+#{$isDesktop} {
+    .intro {
+        height: px2rem(750);
+        &__title {
+            font-size: px2rem(58);
+            span {
+                font-size: px2rem(58);
+            }
+        }
+        &__subtitle {
+            font-size: px2rem(36);
+        }
+    }
+}
+
+#{$isMobile} {
+    .intro {
+        height: 100vh;
+        &__title {
+            font-size: 7.5vw;
+            margin-top: px2rem(15);
+            span {
+                font-size: 7.5vw;
+            }
+        }
+        &__subtitle {
+            font-size: 5.5vw;
+        }
+    }
+}

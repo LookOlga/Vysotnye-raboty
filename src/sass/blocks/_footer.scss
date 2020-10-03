@@ -1,0 +1,130 @@
+.footer {
+    background: url('../img/footer/bg.png') center (center/cover) no-repeat;
+    position: relative;
+    padding: px2rem(50) 0 px2rem(150) 0;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #080C33 -10%, 
+        rgba(8, 12, 51, 0.31) 135%);
+    }
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    &__contacts {
+        margin-top: px2rem(50);
+        margin-right: px2rem(15);
+    }
+
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: px2rem(20);
+    }
+    &__phone{
+        display: flex;
+        color: #fff;
+        font-weight: 400;
+        font-size: px2rem(18);
+        margin-top: px2rem(20);
+        margin-right: px2rem(45);
+        &::before {
+            content: '';
+            display: block;
+            background: url('../img/footer/phone.png') no-repeat;
+            width: px2rem(20);
+            height: px2rem(20);
+            padding-right: px2rem(14);
+        }
+    }
+    &__title {
+        color: #fff;
+        font-family: $openSans;
+        font-weight: 700;
+        font-size: px2rem(18);
+        
+    }
+    &__icons {
+        margin-top: px2rem(20);
+    }
+    &__whatsapp {
+        margin-left: px2rem(20);
+    }
+    &__form {
+        margin-top: px2rem(50);
+    }
+    &__form-content{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: px2rem(15);
+    }
+    input {
+        width: 186px;
+        height: 37px;
+        border: 1px solid #C4C4C4;
+        background-color: transparent;
+        padding-left: px2rem(15);
+        &::placeholder {
+            color: #9e9e9e;
+        }
+    }
+    
+    &__button {
+        width: 186px;
+        height: 37px;
+        font-weight: 400;
+        font-size: px2rem(14);
+        text-transform: none;
+        color: #fff;
+        background-color: #EA1E41;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+}
+
+#{$isDesktop} {
+    .footer {
+        input {
+            margin-right: px2rem(22);
+            margin-top: px2rem(15);
+        }
+        &__button {
+            margin-top: px2rem(15);
+        }
+        &__content {
+            margin-top: px2rem(25);
+        }
+    }
+    
+}
+#{$isMobile} {
+        .footer {
+            input {
+                margin-top: px2rem(25);
+                margin-right: px2rem(22);
+            }
+            &__button {
+                margin-top: px2rem(25);
+        }
+    }
+        
+}
+
+    

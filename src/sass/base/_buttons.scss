@@ -1,0 +1,27 @@
+.button {
+    background-color: #EA1E41;
+    color: #fff;
+    font-weight: 700;
+    font-size: px2rem(16);
+    text-transform: uppercase;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+#{$isDesktop} {
+    .button {
+        width: px2rem(255);
+        max-width: 100%;
+        height: px2rem(50);
+        font-size: px2rem(16);
+    }
+}
+
+#{$isMobile} {
+    .button {
+        width: px2rem(200);
+        height: px2rem(40);
+        font-size: px2rem(14);
+    }
+}

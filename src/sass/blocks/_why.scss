@@ -1,0 +1,110 @@
+.why {
+    margin-top: px2rem(50);
+    &__title {
+        color: #080C33;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: px2rem(50) px2rem(-15) 0;
+    }
+    &__item {
+        display: flex;
+        flex-grow: 1;
+        min-width: px2rem(450);
+        width: calc(50% - #{px2rem(30)});
+        min-height: px2rem(275);
+        margin: px2rem(30) px2rem(15) 0;
+            img {
+                width: 35%;
+            }
+    }
+    &__item-desc {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        background-color: #f3f3f3;
+        
+    }
+    &__item-title {
+        color: #080C33;
+        font-family: $openSans;
+        font-weight: 700;
+        font-size: px2rem(22);
+    }
+    &__item-text {
+        margin-top: px2rem(25);
+        color: #999;
+        line-height: px2rem(18);
+    }
+    &__post {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: auto;
+    }
+     
+    &__post-text {
+        font-size: px2rem(24);
+        font-weight: 400;
+    }
+    &__sign {
+        margin-top: px2rem(22);
+    }
+    &__label {
+        margin-top: px2rem(18);
+    }
+
+}
+
+#{$isDesktop} {
+    .why {
+        &__item-desc{
+            padding: px2rem(50) px2rem(30) px2rem(30) px2rem(30);
+        }
+        &__post {
+            margin-top: px2rem(100);
+            width: 50%;
+            margin-left: auto;
+            padding-left: px2rem(17);
+        }
+        
+    }
+}
+
+
+#{$isMobile} {
+    .why {
+        &__item-desc{
+            padding: px2rem(30);
+        }
+        &__post {
+            margin-top: px2rem(60);
+            width: 100%;
+        }
+    }
+    @media (max-width: px2rem(550)) {
+        .why {
+            &__items {
+                margin-top: px2rem(30);
+            }
+            &__item {
+                flex-direction: column;
+                align-items: center;
+                min-width: 80%;
+                img {
+                    width: 100%;
+                    max-height: px2rem(250);
+                }
+            }
+            &__item-desc{
+                min-height: px2rem(250);
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+    

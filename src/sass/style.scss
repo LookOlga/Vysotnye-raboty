@@ -1,0 +1,61 @@
+@import 'base/functions';
+@import 'base/variables';
+@import 'base/buttons';
+@import 'base/title';
+@import 'base/animations';
+
+
+* {
+    font-family: 'Roboto', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #080C33;
+  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding-left: 0
+}
+
+a {
+    text-decoration: none;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+  button::-moz-focus-inner {
+    border: none;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: px2rem(1110);
+    padding: px2rem(15);
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/order';
+@import 'blocks/service';
+@import 'blocks/why';
+@import 'blocks/video';
+@import 'blocks/price';
+@import 'blocks/steps';
+@import 'blocks/footer';
+@import 'blocks/modal';

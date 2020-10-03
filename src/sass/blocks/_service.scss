@@ -1,0 +1,199 @@
+.service {
+    background-color: #080C33;
+    margin-top: px2rem(60);
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    &__tabs {
+        display: flex;
+    }
+    &__tab {
+        margin: px2rem(30) px2rem(25) 0;
+        color: #999;
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+        }
+        &_active {
+            position: relative;
+            color: #fff;
+            padding-bottom: px2rem(7);
+            &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: #fff;
+                
+            }
+        }
+    }
+    &__row-column {
+        display: flex;
+        width: 50%;
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        
+        &_info {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fefefe;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            z-index: 1;
+            transition: top .33s;
+            font-size: px2rem(12);
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #000;
+            span {
+                font-style: italic;
+                font-size: px2rem(13);
+                text-transform: none;
+                font-weight: 300;
+                margin-top: px2rem(8);
+            }
+        }
+        &:hover &_info{
+            top: 0;
+            cursor: pointer;
+        }
+    }
+    &__row {
+        display: flex;
+    }
+    &__row-block {
+        display: flex;
+    }
+    &__cell {
+        display: flex;
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        &_info {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fefefe;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 px2rem(8);
+            text-align: center;
+            z-index: 1;
+            transition: top .33s;
+            font-size: px2rem(12);
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #000;
+            span {
+                font-style: italic;
+                font-size: px2rem(13);
+                text-transform: none;
+                font-weight: 300;
+                margin-top: px2rem(8);
+            }
+        }
+        
+        &:hover &_info{
+            top: 0;
+            cursor: pointer;
+        }
+        
+    }
+    &__cell-logo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #EA1E41;
+        
+
+    }
+    .show {
+        display: block;
+    }
+    .hide {
+        display: none;
+    }
+    .slideIn {
+        animation: slideIn ease-in 0.75s;
+    }
+}
+
+#{$isDesktop} {
+    .service {
+        padding: px2rem(20) 0 px2rem(170);
+        &__tabs {
+            margin: 0 px2rem(-25);
+        }
+        &__tab {
+            margin: px2rem(30) px2rem(25) 0;
+        }
+        &__title {
+            margin-top: px2rem(30);
+        }
+        
+        &__table {
+            margin-top: px2rem(78);
+        }
+        &__cell-logo {
+            padding: px2rem(40);
+        }
+        
+    }
+}
+
+#{$isMobile} {
+    .service {
+        padding: px2rem(10) 0 px2rem(50);
+        &__tabs {
+            margin: 0 px2rem(-20);
+        }
+        &__tab {
+            margin: px2rem(30) px2rem(20) 0;
+        }
+        &__title {
+            margin-top: px2rem(30);
+        }
+        &__table {
+            margin-top: px2rem(45);
+        }
+        &__row {
+            flex-direction: column;
+        }
+        &__column {
+            width: 100%;
+        }
+        &__row-column {
+            width: 100%;
+        }
+        &__cell img {
+            width: 100%;
+        }
+        &__cell-logo {
+            padding: px2rem(20);
+        }
+    }
+    
+}

@@ -1,0 +1,105 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+    transition: display .3s linear;
+    &__dialog {
+        margin: px2rem(20) auto;
+        background-color: #fefefe;
+    }
+    &__content {
+        position: relative;
+        width: 100%;
+        padding: px2rem(40);
+        background-color: #fff;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: px2rem(15);
+        font-size: px2rem(40);
+        color: #000;
+        opacity: .5;
+        font-weight: 700;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    &__title {
+        text-align: center;
+        font-size: px2rem(22);
+        font-weight: 500;
+        margin-bottom: px2rem(15);
+    }
+    input {
+        display: block;
+        margin: px2rem(20) auto;
+        width: px2rem(250);
+        height: px2rem(50);
+        border: px2rem(1) solid #c4c4c4;
+        font-size: px2rem(14);
+        text-align: left;
+        padding: px2rem(10);
+        outline: none;
+    }
+    &__button {
+        display: block;
+        margin: 0 auto;
+        background-color: #EA1E41;
+        color: #fff;
+        font-weight: 700;
+        font-size: px2rem(16);
+        height: px2rem(50);
+        outline: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+}
+
+.show {
+    display: block;
+
+}
+.hide {
+    display: none;
+}
+
+#{$isDesktop} {
+    .modal {
+        &__dialog{
+            max-width: px2rem(400);
+        }
+        input {
+            width: px2rem(250);
+        }
+        &__button {
+            width: px2rem(250);
+        }
+        
+    }
+}
+
+#{$isMobile} {
+    .modal {
+        &__dialog{
+            max-width: px2rem(320);
+        }
+        input {
+            width: px2rem(220);
+            
+        }
+        &__button {
+            width: px2rem(220);
+        }
+        
+    }
+}

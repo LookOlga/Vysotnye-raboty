@@ -1,0 +1,130 @@
+.price {
+    margin-top: px2rem(50);
+    &__title{
+        color:  #080C33;
+    }
+    &__blocks {
+        display: flex;
+    }
+    &__block {
+        background: #fff;
+        box-shadow: 0 0 px2rem(15) rgba(0, 0, 0, 0.2);
+        
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__head-title {
+        font-weight: 400;
+        font-size: px2rem(24);
+        margin-top: px2rem(20);
+        margin-right: px2rem(5);
+        
+    }
+    &__head-cells {
+        display: flex;
+        justify-content: space-between;
+        margin-top: px2rem(20);
+    
+    }
+    &__head-cell{
+        margin-left: px2rem(12);
+    }
+    &__items{
+        margin-top: px2rem(40);
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: px2rem(25);
+    }
+    &__name {
+        background-image: radial-gradient(#c4c4c4 1px, #fff 0px);
+        background-size: px2rem(5) px2rem(5);
+        background-repeat: repeat-x;
+        background-position: 0% 90%;
+        width: 85%;
+        span {
+            background-color: #fff;
+            color: #999;
+            padding-right: px2rem(4);
+        }
+    }
+    
+    &__levels {
+        display: flex;
+    }
+    &__level {
+        margin-left: px2rem(12);
+        min-width: px2rem(50);
+    }
+    &__note {
+        font-size: px2rem(12);
+        color: #999;
+        margin-top: px2rem(30);
+    }
+}
+
+#{$isDesktop} {
+    .price {
+        &__blocks {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: px2rem(25) px2rem(-15) 0;
+        }
+        &__block {
+            width: calc(50% - #{px2rem(30)});
+            min-width: px2rem(500);
+            flex-grow: 1;
+            margin: px2rem(30) px2rem(15) 0;
+            padding: px2rem(20) px2rem(40) px2rem(40);
+        }
+        &__dots {
+            display: none;
+        }
+    }
+}
+
+#{$isMobile} {
+        .price {
+            &__slider-wrap {
+                overflow: hidden;
+            }
+            &__blocks {
+                transition: transform .4s linear;
+                margin-top: px2rem(25);
+            }
+            &__block {
+                box-sizing: border-box;
+                padding: px2rem(10) px2rem(20) px2rem(30);
+                margin: px2rem(15);
+            }
+            &__head-cells {
+                margin-left: auto;
+            }
+            &__items {
+                margin-top: px2rem(25);
+            }
+            &__dots {
+                display: flex;
+                justify-content: center;
+                margin-top: px2rem(30);
+            }
+            &__dot {
+                cursor: pointer;
+                width: px2rem(12);
+                height: px2rem(12);
+                border-radius: 100%;
+                border: 1px solid #080C33;
+                margin:  0 px2rem(5);
+                &_active {
+                    background-color: #080C33;
+                }
+            }
+        }
+    
+}
