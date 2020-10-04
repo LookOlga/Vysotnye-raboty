@@ -5,6 +5,7 @@
 @import 'base/animations';
 
 
+
 * {
     font-family: 'Roboto', serif;
     padding: 0;
@@ -49,6 +50,7 @@ body {
     margin: 0 auto;
 }
 
+@import 'blocks/preloader';
 @import 'blocks/header';
 @import 'blocks/intro';
 @import 'blocks/order';

@@ -13,7 +13,7 @@ const path = require('path');
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            baseDir: "src"
+            baseDir: "dist"
         }
     });
     gulp.watch("src/*.html").on('change', browserSync.reload);
