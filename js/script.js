@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         setTimeout(()=>{
             document.body.classList.add('loaded');
-        }, 400)
+        }, 500)
         
 });
 
