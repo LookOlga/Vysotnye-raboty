@@ -13,7 +13,6 @@
         display: flex;
     }
     &__tab {
-        margin: px2rem(30) px2rem(25) 0;
         color: #999;
         cursor: pointer;
         &:hover {
@@ -144,11 +143,11 @@
 #{$isDesktop} {
     .service {
         padding: px2rem(20) 0 px2rem(170);
-        &__tabs {
-            margin: 0 px2rem(-25);
-        }
         &__tab {
             margin: px2rem(30) px2rem(25) 0;
+            &:last-child {
+                margin-right: 0;
+            }
         }
         &__title {
             margin-top: px2rem(30);
@@ -168,13 +167,16 @@
     .service {
         padding: px2rem(10) 0 px2rem(50);
         &__tabs {
-            margin: 0 px2rem(-20);
+            margin: 0 0 0 px2rem(-20);
         }
         &__tab {
             margin: px2rem(30) px2rem(20) 0;
+            &:last-child {
+                margin-right: 0;
+            }
         }
         &__title {
-            margin-top: px2rem(30);
+            margin: px2rem(30) px2rem(50) 0 0;
         }
         &__table {
             margin-top: px2rem(45);
