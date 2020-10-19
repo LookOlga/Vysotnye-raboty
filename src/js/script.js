@@ -1,10 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            document.body.classList.add('loaded');
-        }, 500)
+'use strict';
 
-    });
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 600)
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
 
     const menu = document.querySelector('.header__menu'),
         hamburger = document.querySelector('.header__hamburger');
